@@ -1,7 +1,7 @@
 import random
 
-NUM_POCET = 6 #3 #zadanie maximalnej velkosti cisla na hadanie
-MAX_GUESSES = 3 #zadanie maximalneho poctu pokuv pre hadnutie cisla
+NUM_POCET = 3 #3 #zadanie maximalnej velkosti cisla na hadanie
+MAX_GUESSES = 10 #zadanie maximalneho poctu pokuv pre hadnutie cisla
 
 
 #telo hlavnej funkcie
@@ -63,11 +63,11 @@ def getNapovedy(pokus, taj_cislo):
 
     #tvorba napovedy
     for i in range(len(pokus)):
-        #ak sa jedno cislo nachadza v casti hladaneho cisla
+        #ak sa jedno cislo nachadza v casti hladaneho cisla a je na spravnom mieste
         if pokus[i] == taj_cislo[i]:
             napoveda.append("Fermi")
 
-        #ak sa jedno cislo nachadza v casti hadaneho cisla
+        #ak sa jedno cislo nachadza v casti hadaneho cisla ale nie je na spravnom mieste
         elif pokus[i] in taj_cislo:
             napoveda.append("Pico")
     
